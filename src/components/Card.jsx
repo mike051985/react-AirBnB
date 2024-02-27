@@ -4,7 +4,7 @@ import ImageStats from '../images/star.png'
 import '../App.css'
 
 export default function Card(props) {
-  console.log(props)
+  
   return (
     <div className='card'>
       <img src={props.imgUrl} className='card--image' />
@@ -14,8 +14,8 @@ export default function Card(props) {
         <span className='gray'>({props.reviewCount}) . </span>
         <span className='gray'>{props.location}</span>
       </div>
-      <h2>{props.title}</h2>
-      <p><span className='bold'>From ${props.price} </span>/ person</p>
+      <h2 className='card--title'>{props.title}</h2>
+      <p className='card--price'><span className='bold'>From ${props.price} </span>/ person</p>
     </div>
   )
 }
